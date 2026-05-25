@@ -6,7 +6,7 @@
 
 Why it exists: Promise chains can get hard to scan when a test has a lot of steps. `await` lets the code read top to bottom, which is closer to how we run a test case.
 
-## What happens if I forget await
+## What happens if we forget await
 
 If we forget `await`, the code keeps moving before the async work is done. In a test, that can become a race condition: the next assertion runs too early, the page is not ready yet, and the test flips between pass and fail depending on timing. That is the classic flaky test problem.
 
